@@ -35,7 +35,7 @@ export class AuthService {
   }
 
   login (email,password): Observable<Object> {
-    const urlAuth = "http://localhost/auth/login"; 
+    const urlAuth = "http://localhost:3000/api/auth/login"; 
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
@@ -49,6 +49,7 @@ export class AuthService {
       console.log(data["error"]);
     }
     else{
+      alert("hello");
       this.storeUserData(data["token"],data["user"],data["expireTime"]);
       this.loadToken();
     }

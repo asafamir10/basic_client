@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './main/home/home.component';
+import { UserComponent } from './users/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

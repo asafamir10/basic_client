@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
   login() {
     this.showProgerss = true;
     this.authService.login(this.user.email, this.user.password).subscribe((data) => {
+      console.log(data);
     if (this.isLoggedIn()) {
       this.router.navigateByUrl("");
     }
